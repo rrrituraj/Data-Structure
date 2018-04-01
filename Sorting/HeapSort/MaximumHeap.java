@@ -1,6 +1,6 @@
 package Sorting.HeapSort;
 
-public class BuildMaximumHeap {
+public class MaximumHeap {
     private int heapSize;
 
     public int[] buildMaxHeap(int[] arr) {
@@ -17,7 +17,7 @@ public class BuildMaximumHeap {
      * @return Heapified Array
      */
     @SuppressWarnings("InfiniteRecursion")
-    private int[] maxHeapiFy(int[] arr, int i) {
+    public int[] maxHeapiFy(int[] arr, int i) {
         int l, r;
 
         l = 2 * i + 1;
@@ -40,7 +40,7 @@ public class BuildMaximumHeap {
         return arr;
     }
 
-    private void exchangeNumber(int[] arr, int i, int largest) {
+    public void exchangeNumber(int[] arr, int i, int largest) {
         int temp = arr[i];
         arr[i] = arr[largest];
         arr[largest] = temp;
