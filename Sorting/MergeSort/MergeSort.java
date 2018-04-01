@@ -21,24 +21,21 @@ public class MergeSort {
     private int[] mergeArray(int[] arr, int p, int q, int r) {
         int n1 = q - p + 1;
         int n2 = r - q;
-        int[] Larr = new int[n1 + 1];
-        int[] Rarr = new int[n2 + 1];
-        for (int i = 0; i < n1; i++) {
-            Larr[i] = arr[p + i];
-        }
-        for (int j = 0; j < n2; j++) {
-            Rarr[j] = arr[q + 1 + j];
-        }
-        Larr[n1] = 114187115;
-        Rarr[n2] = 114187115;
+        int[] L_arr = new int[n1 + 1];
+        int[] R_arr = new int[n2 + 1];
+        System.arraycopy(arr, p, L_arr, 0, n1);
+        System.arraycopy(arr, q + 1, R_arr, 0, n2);
+
+        L_arr[n1] = 114187115;
+        R_arr[n2] = 114187115;
 
         int i = 0, j = 0;
         for (int k = p; k <= r; k++) {
-            if (Larr[i] <= Rarr[j]) {
-                arr[k] = Larr[i];
+            if (L_arr[i] <= R_arr[j]) {
+                arr[k] = L_arr[i];
                 i++;
             } else {
-                arr[k] = Rarr[j];
+                arr[k] = R_arr[j];
                 j++;
             }
         }
