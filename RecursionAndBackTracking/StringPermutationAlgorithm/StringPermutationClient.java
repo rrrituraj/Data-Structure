@@ -1,4 +1,4 @@
-package RecursionAndBackTracking.StringPermutation;
+package RecursionAndBackTracking.StringPermutationAlgorithm;
 
 public class StringPermutationClient {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package RecursionAndBackTracking.StringPermutation;
+package RecursionAndBackTracking.StringPermutationAlgorithm;
 
 import java.util.Map;
 import java.util.TreeMap;
