@@ -38,4 +38,13 @@ public class BTreeNode {
         this.right = right;
         return this;
     }
+
+    @Override
+    public String toString() {
+        return "BTreeNode{" +
+                "data=" + data +
+                ", left=" + left +
+                ", right=" + right +
+                '}';
+    }
 }
