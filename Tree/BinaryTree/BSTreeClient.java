@@ -1,6 +1,9 @@
 package Tree.BinaryTree;
 
+import java.util.ArrayList;
+
 public class BSTreeClient {
+    @SuppressWarnings("unchecked")
     public static void main(String[] args) {
         BinarySearchTree tree = new BinarySearchTree();
         tree.insertData(50);
@@ -13,5 +16,17 @@ public class BSTreeClient {
 
         // print inorder traversal of the BST
         tree.displayTree();
+    /*System.out.println("\nafter delete");
+
+    tree.deleteData(20);*/
+
+        System.out.println("\nSize of tree is:\t" + tree.sizeOfTree());
+        System.out.println("\nheight of tree is:\t" + tree.height());
+        ArrayList<Integer> result = new ArrayList();
+        System.out.println("\nroot to leaf sum:\t" + tree.rootToLeafSum(120, result));
+        for (int i = result.size() - 1; i >= 0; i--) {
+            System.out.print("  " + result.get(i));
+        }
+        System.out.println("\nisBST:\t" + tree.isBST());
     }
 }

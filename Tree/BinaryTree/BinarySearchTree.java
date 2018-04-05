@@ -1,29 +1,43 @@
 package Tree.BinaryTree;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+
+@SuppressWarnings("ALL")
 public class BinarySearchTree {
-  private BTreeNode root;
+    private BTreeNode root;
 
-  public BinarySearchTree() {
-    root = null;
-  }
-
-  public void insertData(int data) {
-      root = insertData(root, data);
-  }
-
-  private BTreeNode insertData(BTreeNode root, int data) {
-    if (root == null) {
-      root = new BTreeNode();
-      root.setData(data);
-      return root;
+    public BinarySearchTree() {
+        root = null;
     }
-    if (data < root.getData()) {
-      root.setLeft(insertData(root.getLeft(), data));
-    } else if (data > root.getData()) {
-      root.setRight(insertData(root.getRight(), data));
+
+    public BTreeNode getRoot() {
+        return root;
     }
-    return root;
-  }
+
+    public BinarySearchTree setRoot(BTreeNode root) {
+        this.root = root;
+        return this;
+    }
+
+    public void insertData(int data) {
+        root = insertData(root, data);
+    }
+
+    private BTreeNode insertData(BTreeNode root, int data) {
+        if (root == null) {
+            root = new BTreeNode();
+            root.setData(data);
+            return root;
+        }
+        if (data < root.getData()) {
+            root.setLeft(insertData(root.getLeft(), data));
+        } else if (data > root.getData()) {
+            root.setRight(insertData(root.getRight(), data));
+        }
+        return root;
+    }
 
     public void deleteData(int data) {
         root = deleteDataNode(root, data);
@@ -67,15 +81,134 @@ public class BinarySearchTree {
         }
     }
 
-  public void displayTree() {
-    displayTree(root);
-  }
-
-  public void displayTree(BTreeNode root) {
-    if (root != null) {
-        System.out.print(root.getData() + "  ");
-      displayTree(root.getLeft());
-      displayTree(root.getRight());
+    public int sizeOfTree() {
+        return sizeOfTree(root);
     }
-  }
+
+    private int sizeOfTree(BTreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        return sizeOfTree(root.getLeft()) + sizeOfTree(root.getRight()) + 1;
+    }
+
+    public int height() {
+        return height(root);
+    }
+
+    private int height(BTreeNode root) {
+        if (root == null) return 0;
+        return 1 + Math.max(height(root.getLeft()), height(root.getRight()));
+    }
+
+    /*
+    root to leaf sum
+     */
+    public boolean rootToLeafSum(int sum, ArrayList<Integer> result) {
+
+        return rootToLeafSum(root, sum, result);
+    }
+
+    private boolean rootToLeafSum(BTreeNode root, int sum, ArrayList<Integer> result) {
+        if (root == null) return false;
+        if (root.getLeft() == null && root.getRight() == null) {
+            if (root.getData() == sum) {
+                result.add(root.getData());
+                return true;
+            } else {
+                return false;
+            }
+        }
+        if (rootToLeafSum(root.getLeft(), sum - root.getData(), result)) {
+            result.add(root.getData());
+            return true;
+        }
+        if (rootToLeafSum(root.getRight(), sum - root.getData(), result)) {
+            result.add(root.getData());
+            return true;
+        }
+        return false;
+    }
+
+    public void displayTree() {
+        displayTree(root);
+    }
+
+    public void displayTree(BTreeNode root) {
+        if (root != null) {
+            System.out.print(root.getData() + "  ");
+            displayTree(root.getLeft());
+            displayTree(root.getRight());
+        }
+    }
+
+    public boolean isBST() {
+        return isBST(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
+    }
+
+    private boolean isBST(BTreeNode root, int minValue, int maxValue) {
+        if (root == null) return true;
+        if (root.getData() <= minValue || root.getData() >= maxValue) return false;
+        return isBST(root.getLeft(), minValue, root.getData())
+                && isBST(root.getRight(), root.getData(), maxValue);
+    }
+
+    public void levelByTraversal() {
+        BTreeNode node = root;
+        levelByTraversal(node);
+    }
+
+    public void levelorderTraversal() {
+        BTreeNode node = root;
+        levelorderTraversal(node);
+    }
+
+    private void levelorderTraversal(BTreeNode node) {
+        if (node == null) {
+            return;
+        }
+        Queue<BTreeNode> q = new LinkedList<>();
+        q.add(node);
+        while (!q.isEmpty()) {
+            node = q.poll();
+            System.out.print(node.getData() + "  ");
+            if (node.getLeft() != null) {
+                q.add(node.getLeft());
+            }
+            if (node.getRight() != null) {
+                q.add(node.getRight());
+            }
+        }
+    }
+
+    private void levelByTraversal(BTreeNode node) {
+        if (node == null) return;
+        Queue<BTreeNode> q1 = new LinkedList<>();
+        Queue<BTreeNode> q2 = new LinkedList<>();
+        q1.add(node);
+        while (!q1.isEmpty() || !q2.isEmpty()) {
+            while (!q1.isEmpty()) {
+                node = q1.poll();
+                System.out.print(node.getData() + " ");
+                if (node.getLeft() != null) {
+                    q2.add(node.getLeft());
+                }
+                if (node.getRight() != null) {
+                    q2.add(node.getRight());
+                }
+            }
+            System.out.println();
+            while (!q2.isEmpty()) {
+                node = q2.poll();
+                System.out.print(node.getData() + " ");
+                if (node.getLeft() != null) {
+                    q1.add(node.getLeft());
+                }
+                if (node.getRight() != null) {
+                    q1.add(node.getRight());
+                }
+            }
+            System.out.println();
+        }
+    }
 }
