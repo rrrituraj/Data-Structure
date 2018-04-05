@@ -2,14 +2,16 @@ package Tree.BinaryTree;
 
 public class BSTreeClient {
     public static void main(String[] args) {
-        BinarySearchTree binarySearchTree = new BinarySearchTree();
-        binarySearchTree.insertData(1);
-        binarySearchTree.insertData(2);
-        binarySearchTree.insertData(3);
-        binarySearchTree.insertData(5);
-        binarySearchTree.insertData(4);
-        binarySearchTree.insertData(6);
+        BinarySearchTree tree = new BinarySearchTree();
+        tree.insertData(50);
+        tree.insertData(30);
+        tree.insertData(20);
+        tree.insertData(40);
+        tree.insertData(70);
+        tree.insertData(60);
+        tree.insertData(80);
 
-        binarySearchTree.displayTree();
+        // print inorder traversal of the BST
+        tree.displayTree();
     }
 }
