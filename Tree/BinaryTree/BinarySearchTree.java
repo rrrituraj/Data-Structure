@@ -3,6 +3,7 @@ package Tree.BinaryTree;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 @SuppressWarnings("ALL")
 public class BinarySearchTree {
@@ -209,6 +210,33 @@ public class BinarySearchTree {
                 }
             }
             System.out.println();
+        }
+    }
+
+    public void levelOrderTraversalInReverse() {
+        levelOrderTraversalInReverse(root);
+    }
+
+    private void levelOrderTraversalInReverse(BTreeNode root) {
+        if (root == null) {
+            return;
+        }
+        Queue<BTreeNode> q = new LinkedList<>();
+        Stack<BTreeNode> s = new Stack<>();
+        q.add(root);
+        while (!q.isEmpty()) {
+            root = q.poll();
+
+            if (root.getLeft() != null) {
+                q.offer(root.getLeft());
+            }
+            if (root.getRight() != null) {
+                q.offer(root.getRight());
+            }
+            s.push(root);
+        }
+        while (!s.isEmpty()) {
+            System.out.print(s.pop().getData() + "  ");
         }
     }
 }
