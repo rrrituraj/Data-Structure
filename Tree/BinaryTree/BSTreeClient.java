@@ -13,8 +13,8 @@ public class BSTreeClient {
         tree.insertData(80);
 
         // print inorder traversal of the BST
-        tree.displayTree();
-        System.out.println();
+//        tree.displayTree();
+//        System.out.println();
     /*System.out.println("\nafter delete");
 
     tree.deleteData(20);*/
@@ -27,8 +27,10 @@ public class BSTreeClient {
         System.out.print("  " + result.get(i));
     }*/
         //        System.out.println("\nisBST:\t" + tree.isBST());
-        tree.levelByTraversal();
-        System.out.println();
+        /*tree.levelByTraversal();
+        System.out.println();*/
         tree.levelorderTraversal();
+        System.out.println();
+        tree.levelOrderTraversalInReverse();
     }
 }
