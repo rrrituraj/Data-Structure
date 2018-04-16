@@ -9,21 +9,15 @@ public class BinaryTree {
   public BinaryTree() {
   }
 
-  public void insert(Integer data) {
-    root = insert(root, data);
+  public void insertLevelOrder(Integer[] arr) {
+    root = insertLevelOrder(arr, root, 0);
   }
 
-  private BTreeNode insert(BTreeNode root, Integer data) {
-    if (root == null) {
-      root = new BTreeNode(data);
-      return root;
-    }
-    if (root.getLeft() == null) {
-      root.setLeft(insert(root.getLeft(), data));
-    } else if (root.getRight() == null) {
-      root.setRight(insert(root.getRight(), data));
-    } else {
-      insert(root.getLeft(), data);
+  public BTreeNode insertLevelOrder(Integer[] arr, BTreeNode root, Integer i) {
+    if (i < arr.length) {
+      root = new BTreeNode(arr[i]);
+      root.setLeft(insertLevelOrder(arr, root.getLeft(), 2 * i + 1));
+      root.setRight(insertLevelOrder(arr, root.getRight(), 2 * i + 2));
     }
     return root;
   }
@@ -37,16 +31,20 @@ public class BinaryTree {
   }
 
   private BTreeNode search(BTreeNode root, Integer data) {
-    if (root != null && root.getData() == data) {
-      return root;
+    if (root == null) {
+      return null;
+    } else {
+      if (data.equals(root.getData())) {
+        return root;
+      } else {
+        BTreeNode temp = search(root.getLeft(), data);
+        if (temp != null && data.equals(temp.getData())) {
+          return temp;
+        } else {
+          return search(root.getRight(), data);
+        }
+      }
     }
-    if (root.getLeft() != null) {
-      search(root.getLeft(), data);
-    }
-    if (root.getRight() != null) {
-      search(root.getRight(), data);
-    }
-    return root;
   }
 
   @Contract("null, _, _ -> null")

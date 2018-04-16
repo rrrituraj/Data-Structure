@@ -1,50 +1,47 @@
 package Tree.BinaryTree;
 
 public class BTreeNode {
-    private int data;
-    private BTreeNode left;
-    private BTreeNode right;
 
-    public BTreeNode(int data) {
-        this.data = data;
-    }
+  private Integer data;
+  private BTreeNode left;
+  private BTreeNode right;
 
-    public BTreeNode() {
-    }
+  public BTreeNode(int data) {
+    this.data = data;
+  }
 
-    public int getData() {
+  public BTreeNode() {
+  }
+
+  public Integer getData() {
         return data;
     }
 
-    public BTreeNode setData(int data) {
-        this.data = data;
-        return this;
-    }
+  public BTreeNode setData(Integer data) {
+    this.data = data;
+    return this;
+  }
 
     public BTreeNode getLeft() {
-        return left;
+      return left;
     }
 
-    public BTreeNode setLeft(BTreeNode left) {
-        this.left = left;
-        return this;
-    }
+  public BTreeNode setLeft(BTreeNode left) {
+    this.left = left;
+    return this;
+  }
 
-    public BTreeNode getRight() {
-        return right;
-    }
+  public BTreeNode getRight() {
+    return right;
+  }
 
-    public BTreeNode setRight(BTreeNode right) {
-        this.right = right;
-        return this;
-    }
+  public BTreeNode setRight(BTreeNode right) {
+    this.right = right;
+    return this;
+  }
 
-    @Override
-    public String toString() {
-        return "BTreeNode{" +
-                "data=" + data +
-                ", left=" + left +
-                ", right=" + right +
-                '}';
-    }
+  @Override
+  public String toString() {
+    return "BTreeNode{" + "data=" + data + ", left=" + left + ", right=" + right + '}';
+  }
 }
