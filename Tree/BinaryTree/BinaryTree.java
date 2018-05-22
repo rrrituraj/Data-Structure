@@ -2,6 +2,9 @@ package Tree.BinaryTree;
 
 import org.jetbrains.annotations.Contract;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BinaryTree {
 
   private BTreeNode root;
@@ -81,4 +84,36 @@ public class BinaryTree {
     BinarySearchTree bst = new BinarySearchTree();
     bst.levelByTraversal(root);
   }
+
+    public Integer height() {
+        return height(root);
+    }
+
+    public Integer height(BTreeNode root) {
+        Integer level = 0;
+        Queue<BTreeNode> q = new LinkedList<>();
+        if (root == null) {
+            return 0;
+        }
+        q.add(root);
+        q.add(null);
+        while (!q.isEmpty()) {
+            root = q.poll();
+            if (root == null) {
+                if (!q.isEmpty()) {
+                    q.add(null);
+                    level++;
+                }
+            } else {
+                if (root.getLeft() != null) {
+                    q.add(root.getLeft());
+                }
+                if (root.getRight() != null) {
+
+                    q.add(root.getRight());
+                }
+            }
+        }
+        return level;
+    }
 }
