@@ -126,4 +126,80 @@ public class SLinkedListOperations {
     }
     return null;
   }
+
+  public void isSnakeOrSnail() {
+    SLNode node = findBeginOfLoop(headNode);
+    if (node == headNode) {
+      System.out.println("is Snake");
+    } else if (node == null) {
+      System.out.println("loop does not exist!!");
+    } else {
+      System.out.println("is Snail");
+    }
+  }
+
+  public int lenghtOfLoop() {
+    SLNode ptr1 = findBeginOfLoop(headNode);
+    SLNode ptr2 = ptr1;
+    int counter = 0;
+    while (ptr2.getNext() != ptr1) {
+      counter++;
+      ptr2 = ptr2.getNext();
+    }
+    counter++;
+    System.out.println("length of loop is: " + counter);
+    return counter;
+  }
+
+  /*Reversing a single Linked List*/
+  public void reverseList() {
+    headNode = reverseList(headNode);
+    this.listTraverse();
+  }
+
+  private SLNode reverseList(SLNode headNode) {
+    SLNode prev = null;
+    SLNode next = null;
+    SLNode curr = headNode;
+    while (curr != null) {
+      next = curr.getNext();
+      curr.setNext(prev);
+      prev = curr;
+      curr = next;
+    }
+    return prev;
+  }
+
+  public void intersectNode() {
+    SLinkedList sLinkedList1 =
+        new SLinkedList(new int[]{2, 3, 5, 9, 8, 7, 6, 3, 2, 1, 4, 5, 6, 3, 2, 4});
+    SLinkedList sLinkedList2 =
+        new SLinkedList(new int[]{2, 3, 5, 9, 6, 7, 2, 3, 5, 5, 6, 3, 2, 4});
+    SLNode node1 = sLinkedList1.getHeadNode();
+    SLNode node2 = sLinkedList2.getHeadNode();
+    SLNode q = node2.getNext().getNext().getNext().getNext();
+    SLNode p = node1;
+    while (p.getNext() != null) {
+      p = p.getNext();
+    }
+    p.setNext(q);
+
+    findIntersectNode(node1, node2);
+  }
+
+  private boolean findIntersectNode(SLNode node1, SLNode node2) {
+    HashSet<SLNode> nodeSet = new HashSet<>();
+    while (node1 != null) {
+      nodeSet.add(node1);
+      node1 = node1.getNext();
+    }
+    while (node2 != null) {
+      if (nodeSet.contains(node2.getNext())) {
+        System.out.println("intersecting node is:   " + node2.getNext().getData());
+        return true;
+      }
+      node2 = node2.getNext();
+    }
+    return false;
+  }
 }

@@ -4,6 +4,10 @@ public class SLinkedList {
 
   private SLNode headNode;
 
+  public SLNode getHeadNode() {
+    return headNode;
+  }
+
   public SLinkedList(int[] arr) {
     for (int i : arr) {
       this.insertNode(i);
