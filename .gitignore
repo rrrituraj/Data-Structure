@@ -29,8 +29,15 @@ out/production/Data-Structure/.idea/
 out/production/Data-Structure/Data-Structure.iml
 out/production/Data-Structure/README.md
 out/production/Data-Structure/ReadMe.txt
-
 #idea file
 .md
 .idea
 .iml
+
+LinkedList/TestLinkedListOperations.java
+LinkedList/TestSLinkedList.java
+LinkedList/TestDLinkedList.java
+out/production/Data-Structure/.gitignore
+out/production/Data-Structure/Sorting/HeapSort/heapsort.jpg
+out/production/Data-Structure/Sorting/MergeSort/mergesort.jpg
+out/production/Data-Structure/Sorting/QuickSort/quicksory.jpg
