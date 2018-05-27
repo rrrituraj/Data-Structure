@@ -13,6 +13,7 @@ public class SLinkedListOperations {
     }
   }
 
+  /*creating looped list*/
   public void loopedList() {
     headNode = loopedList(headNode);
   }
@@ -201,5 +202,49 @@ public class SLinkedListOperations {
       node2 = node2.getNext();
     }
     return false;
+  }
+
+  public void findMiddleElement() {
+    SLNode slowPtr = headNode;
+    SLNode fastPtr = headNode;
+    int i = 0;
+    while (fastPtr.getNext() != null) {
+      if (i == 0) {
+        fastPtr = fastPtr.getNext();
+        i = 1;
+      } else if (i == 1) {
+        fastPtr = fastPtr.getNext();
+        slowPtr = slowPtr.getNext();
+        i = 0;
+      }
+    }
+    System.out.println("middle element is:  " + slowPtr.getData());
+  }
+
+  public void printFromEnd() {
+    printFromEnd(headNode);
+  }
+
+  /**
+   * printing from end
+   */
+  private void printFromEnd(SLNode node) {
+    if (node == null) {
+      return;
+    }
+    printFromEnd(node.getNext());
+    System.out.print(node.getData() + "  ");
+  }
+
+  public void isEvenOrOdd() {
+    SLNode node = headNode;
+    while (node != null && node.getNext() != null) {
+      node = node.getNext().getNext();
+    }
+    if (node == null) {
+      System.out.println("Even");
+    } else {
+      System.out.println("Odd");
+    }
   }
 }
