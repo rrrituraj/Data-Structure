@@ -1,6 +1,6 @@
 package Tree.BinaryTree;
 
-import org.jetbrains.annotations.Contract;
+//import org.jetbrains.annotations.Contract;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -50,7 +50,7 @@ public class BinaryTree {
     }
   }
 
-  @Contract("null, _, _ -> null")
+//  @Contract("null, _, _ -> null")
   private BTreeNode LCA(BTreeNode root, BTreeNode node1, BTreeNode node2) {
 
     if (root == null) {

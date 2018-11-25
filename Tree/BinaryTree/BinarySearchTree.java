@@ -1,10 +1,11 @@
 package Tree.BinaryTree;
 
+//import org.jetbrains.annotations.Contract;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
-import org.jetbrains.annotations.Contract;
 
 @SuppressWarnings("ALL")
 public class BinarySearchTree {
@@ -279,7 +280,7 @@ public class BinarySearchTree {
     System.out.println("Lowest Common Ancestor By BST Way is " + lca.getData());
   }
 
-  @Contract("null, _, _ -> null")
+//  @Contract("null, _, _ -> null")
   private BTreeNode BST_LCA(BTreeNode root, BTreeNode node1, BTreeNode node2) {
     if (root == null) {
       return null;

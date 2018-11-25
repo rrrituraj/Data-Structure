@@ -26,8 +26,8 @@ public class MergeSort {
         System.arraycopy(arr, p, L_arr, 0, n1);
         System.arraycopy(arr, q + 1, R_arr, 0, n2);
 
-        L_arr[n1] = 114187115;
-        R_arr[n2] = 114187115;
+        L_arr[n1] = Integer.MAX_VALUE;
+        R_arr[n2] = Integer.MAX_VALUE;
 
         int i = 0, j = 0;
         for (int k = p; k <= r; k++) {
