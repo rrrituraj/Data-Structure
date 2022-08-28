@@ -1,5 +1,6 @@
 package string;
 
+// take help from https://www.techiedelight.com/check-given-string-rotated-palindrome-not/
 public class RotationPalindrome {
     public static void main(String[] args) {
         String str = "CBAABCD";

@@ -1,5 +1,6 @@
 package string;
 
+// took help from https://www.techiedelight.com/check-given-string-rotated-palindrome-not/
 public class LongestPalindromeSubstring {
     private static String resStr = "";
     private static int resLength = 0;
