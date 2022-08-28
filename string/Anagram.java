@@ -1,7 +1,5 @@
 package string;
 
-//import com.sun.istack.internal.NotNull;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.logging.Logger;
 
@@ -9,7 +7,7 @@ public class Anagram {
   private static Logger logger = Logger.getLogger("Anagram.class");
   String name;
 
-  public static boolean isAnagram(@NotNull String word, @NotNull String angrm) {
+  public static boolean isAnagram( String word,  String angrm) {
     /*
      * if length of both string does not match then obviously both are different
      */
