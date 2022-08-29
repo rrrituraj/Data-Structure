@@ -1,0 +1,109 @@
+
+https://www.techiedelight.com/string-interview-questions/
+
+Check if a string is a rotated palindrome or not
+Longest Palindromic Substring Problem
+Check if a repeated subsequence is present in a string or not
+Check if strings can be derived from each other by circularly rotating them
+Check if a set of moves is circular or not
+Convert a number into a corresponding excel column name
+Determine whether two strings are anagram or not
+Find all interleaving of given strings
+Isomorphic Strings
+Find all possible palindromic substrings of a string
+Find all possible combinations of words formed from the mobile keypad
+Find all possible combinations by replacing given digits with characters of the corresponding list
+>Find all words that follow the same order of characters as given pattern
+Group anagrams together from a list of words
+Find minimum operations required to transform a string into another string
+Determine whether a string can be transformed into another string in a single edit
+In-place remove all occurrences of AB and C from a string
+Find the longest even-length palindromic sum substring of a string
+Print string in the zigzag form in k rows
+Run Length Encoding (RLE) Data Compression Algorithm
+Find the longest substring of a string containing k distinct characters
+Find all palindromic permutations of a string
+Find all substrings of a string that are a permutation of another string
+Find the longest substring of a string containing distinct characters
+Find all permutations of a string – C++, Java, Python
+Iterative approach to finding permutations of a string
+Find all lexicographically next permutations of a string sorted in ascending order
+Lexicographically Minimal String Rotation
+Find all strings of a given length containing balanced parentheses
+Find all combinations of non-overlapping substrings of a string
+Determine whether a string is a palindrome or not
+Find the minimum number of inversions needed to make an expression balanced
+Construct the longest palindrome by shuffling or deleting characters from a string
+Print all combinations of phrases formed by picking words from each of the given lists
+Break a string into all possible combinations of non-overlapping substrings
+Remove all extra spaces from a string
+Remove adjacent duplicate characters from a string
+Find the first non-repeating character in a string by doing only one traversal of it
+Find all n-digit strictly increasing numbers (Bottom-up and Top-down approach)
+Find all n-digit binary numbers having more 1’s than 0’s for any prefix
+Find all n-digit numbers with a given sum of digits
+Find all n-digit binary numbers with k-bits set where k ranges from 1 to n
+Find all n-digit binary numbers with an equal sum of bits in their two halves
+Find all n-digit numbers with equal sum of digits at even and odd indices
+Find all lexicographic permutations of a string
+Lexicographic rank of a string
+Find all lexicographically previous permutations of a string sorted in descending order
+Replace all non-overlapping occurrences of a pattern
+Find all substrings containing exactly k distinct characters
+Introduction to Pattern Matching
+Implementation of KMP Algorithm
+Reverse a string using recursion
+Determine whether the characters of a string follow a specified order or not
+In-place remove all adjacent duplicates from a string
+Check if a sentence is syntactically correct or not
+Number to word conversion
+Implement strstr function in Java
+Shortest Superstring Problem
+Find the shortest route in a device to construct a given string
+Find the minimum number possible by doing at-most k swaps
+Determine whether a string matches with a given pattern
+Find all occurrences of the given string in a character matrix
+Difference between Subarray, Subsequence, and Subset
+Check if an expression is balanced or not
+Find duplicate parenthesis in an expression
+Evaluate a postfix expression
+Decode a given sequence to construct a minimum number without repeated digits
+Convert an infix expression into a postfix expression
+Reverse a string using a stack data structure
+Find all binary strings that can be formed from a wildcard pattern
+Find the length of the longest balanced parenthesis in a string
+Reverse text without reversing individual words
+Reverse a string without using recursion
+Combinations of words formed by replacing given numbers with corresponding alphabets
+Longest Common Prefix (LCP) Problem
+Longest Common Subsequence Problem
+Longest Common Subsequence (LCS) | Space optimized version
+Longest Common Subsequence of k–sequences
+Longest Common Subsequence | Finding all LCS
+Longest Common Substring Problem
+Longest Palindromic Subsequence using Dynamic Programming
+Longest Repeated Subsequence Problem
+Implement Diff Utility
+Shortest Common Supersequence Problem
+Shortest Common Supersequence | Finding all SCS
+Shortest Common Supersequence Problem using LCS
+The Levenshtein distance (Edit distance) Problem
+Count the number of times a pattern appears in a given string as a subsequence
+Word Break Problem – Dynamic Programming
+Check if a string is k–palindrome or not
+Wildcard Pattern Matching
+Find the minimum number of deletions required to convert a string into a palindrome
+Find minimum cuts needed for the palindromic partition of a string
+Check if a string matches with the given wildcard pattern
+Check if a string is interleaving of two other given strings
+Find correct order of alphabets in a given dictionary of ancient origin
+Find first k non-repeating characters in a string in a single traversal
+Check if a linked list of strings is palindromic
+Generate binary numbers between 1 to n using a queue
+Longest Common Prefix in a given set of strings (using Trie)
+Lexicographic sorting of a given set of keys
+Find the maximum occurring word in a given set of strings
+Find first k maximum occurring words in a given set of strings
+Word Break Problem – Using Trie Data Structure
+Find all words matching a pattern in the given dictionary
+Find the shortest unique prefix for every word in an array
