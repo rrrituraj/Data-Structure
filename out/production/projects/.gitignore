@@ -1,0 +1,47 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Java template
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+*.jpg
+*.iml
+*.txt
+
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+.idea/
+Data-Structure.iml
+out/production/Data-Structure/.idea/
+out/production/Data-Structure/Data-Structure.iml
+out/production/Data-Structure/README.md
+out/production/Data-Structure/ReadMe.txt
+#idea file
+.md
+.idea
+.iml
+
+LinkedList/TestLinkedListOperations.java
+LinkedList/TestSLinkedList.java
+LinkedList/TestDLinkedList.java
+out/production/Data-Structure/.gitignore
+out/production/Data-Structure/Sorting/HeapSort/heapsort.jpg
+out/production/Data-Structure/Sorting/MergeSort/mergesort.jpg
+out/production/Data-Structure/Sorting/QuickSort/quicksory.jpg
